@@ -9,7 +9,9 @@ load_dotenv()
 
 # Configure OpenAI and page
 st.set_page_config(layout="wide", page_title="SE vs CS Roast Battle", page_icon="🔥")
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# openai.api_key = os.getenv("OPENAI_API_KEY")
+
+os.environ.setdefault("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
 
 # Custom CSS for chat interface
 st.markdown("""
